@@ -1,0 +1,28 @@
+.app {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f8ff;
+}
+
+.main-content {
+  flex: 1;
+  padding: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-right: 2rem;
+}
+
+.notifications, .user-profile {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
