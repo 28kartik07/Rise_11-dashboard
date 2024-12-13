@@ -1,0 +1,115 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.progress-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  z-index: 2;
+}
+
+.step-number {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background: #fff;
+  border: 2px solid #ddd;
+  margin-bottom: 6px;
+  position: relative;
+}
+
+.step.completed .step-number {
+  background: #0066ff;
+  color: white;
+  border-color: #0066ff;
+}
+
+.step.current .step-number {
+  border-color: #0066ff;
+  color: #0066ff;
+}
+
+.step-label {
+  font-size: 12px;
+  color: #666;
+}
+
+.step-time {
+  font-size: 10px;
+  color: #999;
+}
+
+.connector {
+  position: absolute;
+  top: 28px;
+  left: calc(50% + 10px);
+  right: calc(-50% + 10px);
+  height: 1px;
+  background: #ddd;
+}
+
+.step:last-child .connector {
+  display: none;
+}
+
+.step.completed .connector {
+  background: #0066ff;
+}
+
+.connector::before,
+.connector::after {
+  content: "•";
+  position: absolute;
+  top: -6px;
+  color: #ddd;
+  font-size: 14px;
+}
+
+.connector::before {
+  left: 33%;
+}
+
+.connector::after {
+  right: 33%;
+}
+
+.step.completed .connector::before,
+.step.completed .connector::after {
+  color: #0066ff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .step-label {
+    font-size: 10px;
+  }
+  
+  .step-time {
+    font-size: 8px;
+  }
+  
+  .connector::before,
+  .connector::after {
+    display: none;
+  }
+}
