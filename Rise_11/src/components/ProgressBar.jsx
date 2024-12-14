@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ProgressBar.css';
 
 function ProgressBar() {
@@ -12,11 +12,25 @@ function ProgressBar() {
     { number: '07', label: 'Payment', status: 'pending' }
   ];
 
+  const [clickedStep, setClickedStep] = useState(null);
+
+  const handleStepClick = (stepNumber) => {
+    setClickedStep(stepNumber);
+  };
+
   return (
     <div className="progress-bar">
       {steps.map((step, index) => (
-        <div key={index} className={`step ${step.status}`}>
-          <div className="step-number">{step.number}</div>
+        <div
+          key={index}
+          className={`step ${step.status} ${clickedStep === step.number ? 'clicked' : ''}`}
+        >
+          <div
+            className="step-number"
+            onClick={() => handleStepClick(step.number)}
+          >
+            {step.number}
+          </div>
           <div className="step-label">{step.label}</div>
           <div className="step-time">{step.status !== 'completed' && '(Approx 5 Min)'}</div>
           <div className="connector"></div>

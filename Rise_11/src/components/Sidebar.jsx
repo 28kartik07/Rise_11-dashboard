@@ -36,7 +36,7 @@ function Sidebar() {
       <div className="sidebar-banner">
         {/* <h3>Get Justice on every Claims</h3> */}
         <div className="banner-image">
-        <img style={{height:'12.5rem',width:'10.5rem'}} src="./public/images/sideimage.png" alt="" />
+        <img style={{height:'13rem',width:'10.5rem'}} src="./public/images/sideimage.png" alt="" />
         </div>
       </div>
     </div>

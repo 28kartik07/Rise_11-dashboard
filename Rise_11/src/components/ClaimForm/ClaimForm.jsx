@@ -13,7 +13,7 @@ function ClaimForm() {
 
   return (
     <div className="claim-form">
-      <h2>File your Claim. <span className="subtitle">Approx 5 Minutes</span></h2>
+      <h2>File your Claim. <span className="subtitle">Approx 5 Minutes</span></h2><br/>
 
       <div className="form-sections">
         <ClaimValue
