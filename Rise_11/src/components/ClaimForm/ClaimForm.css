@@ -114,7 +114,7 @@ section {
 /* Document Upload Area Styling */
 .document-upload-area {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   gap: 15px; /* Reduced gap */
   align-items: center;
 }
